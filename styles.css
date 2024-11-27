@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f7f7f7, #eaeaea);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero {
+    background-image: url(''); 
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    color: rgb(11, 202, 52);
+    text-align: center;
+    border-bottom: 5px solid #5cb85c;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin-top: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in forwards;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-out;
+    position: relative;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #5cb85c;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    border-radius: 8px; 
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #5cb85c;
+    color: white;
+    transform: scale(1.05);
+}
+
+.main-content {
+    flex: 1;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px; 
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #5cb85c;
+    outline: none;
+    transform: scale(1.05);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #5cb85c;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 0 8px 8px 0; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #4cae4c;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.recipe-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px; 
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+.recipe-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-item img {
+    max-width: 100%;
+    border-radius: 15px; 
+    margin-bottom: 10px;
+}
+
+.recipe-title {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.recipe-description {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+    input[type="text"] {
+        width: 80%;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.recipe-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.recipe-item a:hover {
+    color: #5cb85c;
+}
+
+.recipe-hero {
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    color: rgb(13, 223, 48);
+    text-align: center;
+    border-bottom: 5px solid #5cb85c;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.recipe-hero h1 {
+    font-size: 3.5em;
+    margin: 0;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.recipe-hero p {
+    font-size: 1.5em;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in forwards;
+}
+
+.recipe-steps {
+    margin-top: 20px;
+}
+
+.recipe-steps h2 {
+    color: #5cb85c;
+    border-bottom: 2px solid #5cb85c;
+    padding-bottom: 5px;
+}
+
+.recipe-steps ul,
+.recipe-steps ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.recipe-steps li {
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.video-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.video-container h2 {
+    margin-top: 20px;
+    color: #5cb85c;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 15px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #4cae4c;
+    transform: translateY(-3px);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.favorite-btn, .remove-favorite-btn {
+    animation: shake 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.recipe-item img {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero {
+    animation: zoomIn 1s ease-in-out, fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sidebar {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.recipe-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.hero {
+    animation: zoomIn 1s ease-in-out, fadeIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sidebar {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.recipe-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid #5cb85c;
+    z-index: 10; 
+}
+
+.recipe-item img {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #5cb85c, 0 0 20px #5cb85c, 0 0 30px #5cb85c;
+    }
+    to {
+        box-shadow: 0 0 20px #5cb85c, 0 0 30px #5cb85c, 0 0 40px #5cb85c;
+    }
+}
+
+button {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background-color: #4cae4c;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#search-btn i {
+    transition: transform 0.3s;
+}
+
+#search-btn:hover i {
+    transform: rotate(360deg);
+}
+
+.favorite-btn, .remove-favorite-btn {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.recipe-item img {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #5cb85c;
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(92, 184, 92, 0.5);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #5cb85c;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #4cae4c;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#search-btn i {
+    transition: transform 0.3s;
+}
+
+#search-btn:hover i {
+    transform: rotate(360deg);
+}
+
+.favorite-btn, .remove-favorite-btn {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.recipe-item img {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
