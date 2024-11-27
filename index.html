@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+</head>
+<body>
+    <header class="hero">
+        <h1>Discover Delicious Recipes</h1>
+        <p>Explore a variety of dishes from around the world!</p>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" id="categories-link">Categories</a>
+                    <ul id="category-list" style="display: none;">
+                        <li><a href="#" onclick="filterByCategory('Indian')">Indian</a></li>
+                        <li><a href="#" onclick="filterByCategory('Italian')">Italian</a></li>
+                        <li><a href="#" onclick="filterByCategory('Japanese')">Japanese</a></li>
+                        <li><a href="#" onclick="filterByCategory('Mexican')">Mexican</a></li>
+                        <li><a href="#" onclick="filterByCategory('Dessert')">Dessert</a></li>
+                        <li><a href="#" onclick="filterByCategory('Salad')">Salad</a></li>
+                        <li><a href="#" onclick="filterByCategory('Beef')">Beef</a></li>
+                        <li><a href="#" onclick="filterByCategory('Seafood')">Seafood</a></li>
+                        <li><a href="#" onclick="filterByCategory('Vegetarian')">Vegetarian</a></li>
+                        <li><a href="#" onclick="filterByCategory('Breakfast')">Breakfast</a></li>
+                        <li><a href="#" onclick="filterByCategory('Thai')">Thai</a></li>
+                        <li><a href="#" onclick="filterByCategory('Middle Eastern')">Middle Eastern</a></li>
+                        <li><a href="#" onclick="filterByCategory('French')">French</a></li>
+                        <li><a href="#" onclick="filterByCategory('Chinese')">Chinese</a></li>
+                        <li><a href="#" onclick="filterByCategory('Caribbean')">Caribbean</a></li>
+                    </ul>
+                    
+                </li>
+                <li><a href="#" id="favorites-link">Favorites</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search for recipes...">
+                <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <div id="recipe-list" class="recipe-list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
